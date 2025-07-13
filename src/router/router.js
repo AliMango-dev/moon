@@ -12,9 +12,9 @@ import profile from "../views/profile.vue";
 import shop from "../views/shop.vue";
 
 const routes = [
-  {path: "/", component: Homepage},
-  {path: "/Authentication", component: Auth},
-  {path: "/About", component: About},
+  {path: "/home", component: Homepage},
+  {path: "/", name: "Authentication", component: Auth},
+  {path: "/about", component: About},
   {path: "/cart", component: cart},
   {path: "/checkout", component: checkout},
   {path: "/contact", component: contact},
