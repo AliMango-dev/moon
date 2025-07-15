@@ -6,13 +6,13 @@ import { useRouter } from 'vue-router'
   <!-- Section 1 -->
    <section class="section1-bg w-100 d-flex justify-content-center">
     <div class="d-flex justify-content-start w-75">
-        <div class="section1-content d-flex justify-content-center align-items-center align-content-center ">
+        <div class="section1-content d-flex justify-content-center align-items-center align-content-center">
 
             <!-- icon with text-->
             <div class="text-center">
-                <div class="mb-3 border-bottom border-white border-1 pb-4">
+                <div class="mb-3 ">
                     <img src="../assets/contact-moon-icon.png" alt="moon icon" class="img-fluid mb-4 ">
-                    <p class="contact-text h1 text-white ">CONTACT US</p>
+                    <p class="contact-text h1 text-white border-bottom border-white border-1 pb-4">CONTACT US</p>
                 </div>
 
                 <!-- text with links-->
@@ -56,21 +56,55 @@ import { useRouter } from 'vue-router'
             <p class="fw-medium pb-3" style="color: #C69B7B;">San Francisco, 80412</p>
         </div>
     </div>
-
-    <!-- Section 2 - Form-->
-    <div>
-        <form>
-            
-        </form>
-    </div>
-   </section>
-
-   <!-- Section 3 -->
-
-    <section>
-
     </section>
-    
+
+
+    <!-- Section 3 - Form-->
+
+    <section class=" mt-4">
+        <div class="container d-flex justify-content-center align-items-center w-75">
+            <form class="w-100 mx-5">
+                <div class="row g-3 ">
+                    <div class="col-md-6 ">
+                        <div class="mb-4">
+                            <label for="name" class="form-label fw-medium">Name</label>
+                            <input type="text" id="name" class="input-style form-control rounded-0 py-3" placeholder="Samatha Clarken">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="form-label fw-medium">Phone</label>
+                            <input type="text" id="phone" class="input-style form-control rounded-0 py-3" placeholder="(123) 456-7890">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="contact-email" class="form-label fw-medium">Email</label>
+                            <input type="email" id="contact-email" class="input-style form-control rounded-0 py-3" placeholder="example@youremail.com">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="company" class="form-label fw-medium">Company</label>
+                            <input type="text" id="company" class="input-style form-control rounded-0 py-3" placeholder="Moon">
+                        </div>
+                    </div>
+                </div>
+                    
+        
+                <div class="w-100">
+                    <label for="message" class="form-label fw-medium">Message</label>
+                    <textarea name="message" id="message" cols="20" rows="5" placeholder="Type your message here..." class="input-style form-control rounded-0" style="resize: none;"></textarea>
+                    
+                </div>
+                <button type="submit" class="send-message-btn btn w-100 text-white my-3 rounded-0 py-2 fw-medium">SEND MESSAGE <img src="../assets/contact-arrow-icon.svg" alt="arrow-right" class="img-fluid mb-1"></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 4 - Google Map -->
+
+     <section class="d-flex justify-content-center align-items-center mt-4 w-100">
+        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41233.109945165386!2d-0.07428582980258121!3d51.53110430993298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b4a94370469%3A0xdb8be3c9759aab99!2sSir%20John%20Soane&#39;s%20Museum!5e0!3m2!1sar!2ssa!4v1752569918235!5m2!1sar!2ssa" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </section>
 </template>
 
 <style scoped>
@@ -92,4 +126,17 @@ import { useRouter } from 'vue-router'
     color: #FFFDFB;
     font-family: 'Garamond', Courier, monospace;
 }
+
+.send-message-btn{
+    background-color: #3A3845;
+    font: 1000;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.input-style{
+    border: #3A3845 solid 1.35px;
+    
+}
+
 </style>
