@@ -7,14 +7,29 @@
       :alt="card"
     />
     <div class="card-body" style="padding: 0px">
-      <h5 class="card-title text-start" style="color: #3a3845">{{ title }}</h5>
-      <h4 class="text-start fs-5" style="color: #3a3845">{{ price }}</h4>
-      <p class="card-text text-start" style="color: #807f86">
+      <h5
+        class="card-title text-start fw-semibold text-uppercase lh-base mt-3"
+        style="
+          color: #3a3845;
+          font-family: 'Inter', sans-serif;
+          font-size: 18px;
+        "
+      >
+        {{ title }}
+      </h5>
+      <h4
+        class="text-start fs-5"
+        style="color: #3a3845; font-family: 'Inter', sans-serif"
+      >
+        {{ price }}
+      </h4>
+      <p
+        class="card-text text-start mt-3"
+        style="color: #807f86; font-family: 'Inter', sans-serif"
+      >
         {{ description }}
       </p>
-      <a href="#" class="btn btn-primary text-uppercase mt-5 w-100"
-        >Add to cart</a
-      >
+      <a href="#" class="btn text-uppercase fs-5 mt-5 w-100">Add to cart</a>
     </div>
   </div>
 </template>
@@ -30,6 +45,7 @@
   border-radius: 0%;
   color: #3a3845;
   background-color: white;
+  font-family: "Inter", sans-serif;
 }
 </style>
 

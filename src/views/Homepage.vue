@@ -9,8 +9,12 @@ import Homepage13 from "../assets/Homepage13.jpg";
 import Homepage14 from "../assets/Homepage14.jpg";
 import Homepage15 from "../assets/Homepage15.jpg";
 import Homepage16 from "../assets/Homepage16.jpg";
+import Homepage19 from "../assets/Homepage19.jpg";
+import Homepage20 from "../assets/Homepage20.jpg";
+import Homepage21 from "../assets/Homepage21.jpg";
+import Homepage22 from "../assets/Homepage22.jpg";
 
-const cards = [
+const sec3Cards = [
   {
     image: Homepage9,
     title: "Small Ecru Ceramic Compote",
@@ -68,24 +72,70 @@ const cards = [
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
 ];
+const sec5Cards = [
+  {
+    image: Homepage19,
+    title: "Porcelain Dinner Plate",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage20,
+    title: "Ophelia Matte Natural  Vase",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage21,
+    title: "Porcelain Dinner Plate",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage22,
+    title: "Luana Bowl",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+];
 </script>
 <template>
   <!-- section 1 -->
   <div class="sec1-homepage-bg">
     <div class="container">
-      <div class="sec1-homepage-content">
+      <div
+        class="d-flex flex-column align-items-center"
+        style="background-color: #826f66; height: 640px; width: 420px"
+      >
         <img
           src="../assets/Homepage23.png"
           alt="moon-logo"
-          id="sec1-moon-logo"
+          class="sec1-moon-logo"
         />
-        <p>Handcrafted in Viet Nam since 1650</p>
-        <h3 id="sec1-homepage-title" class="text-center">
+        <p class="fs-5 text-white mt-3">Handcrafted in Viet Nam since 1650</p>
+        <h3
+          class="text-center fs-2 fw-bold lh-sm mt-3"
+          style="color: #fffdfb; font-family: 'Garamond', serif"
+        >
           BAT TRANG
           <br />
           DINNER SET
         </h3>
-        <button id="sec1-homepage-button">Shop Now</button>
+        <button
+          class="fs-5 fw-semibold mt-5 border-0 rounded"
+          style="
+            width: 220px;
+            height: 40px;
+            background-color: #ffffff;
+            color: #826f66;
+          "
+        >
+          Shop Now
+        </button>
       </div>
     </div>
   </div>
@@ -93,61 +143,98 @@ const cards = [
   <!-- part1 -->
   <div class="outer-container">
     <div class="container">
-      <div class="sec2-inner-container">
+      <div
+        class="d-flex flex-row justify-content-center align-items-center flex-wrap gap-4"
+        style="margin-top: 100px"
+      >
         <div>
           <img
             src="../assets/Homepage2.jpg"
             alt="moon-logo"
-            class="sec2-logo"
+            style="width: 255px; height: 260px"
           />
-          <h5>TableWare</h5>
+          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
+            TableWare
+          </h5>
         </div>
 
         <div>
           <img
             src="../assets/Homepage3.jpg"
             alt="moon-logo"
-            class="sec2-logo"
+            style="width: 255px; height: 260px"
           />
-          <h5>Home decor</h5>
+          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
+            Home decor
+          </h5>
         </div>
-
         <div>
           <img
             src="../assets/Homepage4.jpg"
             alt="moon-logo"
-            class="sec2-logo"
+            style="width: 255px; height: 260px"
           />
-          <h5>Holiday</h5>
+          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
+            Holiday
+          </h5>
         </div>
 
         <div>
           <img
             src="../assets/Homepage5.jpg"
             alt="moon-logo"
-            class="sec2-logo"
+            style="width: 255px; height: 260px"
           />
-          <h5>collection</h5>
+          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
+            collection
+          </h5>
         </div>
       </div>
     </div>
     <!-- part2 -->
     <div class="outer-container">
       <div class="container">
-        <div class="sec2-inner-container-p2">
-          <div class="sec2-p2-block1">
-            <h4 class="text-center">
+        <div
+          class="row row-cols-2 mx-auto"
+          style="margin-top: 100px; max-width: 1200px"
+        >
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center"
+            style="background-color: #f7f6f5"
+          >
+            <h4
+              class="text-center text-uppercase fw-bold lh-base"
+              style="
+                font-family: 'Garamond', serif;
+                color: #3a3845;
+                letter-spacing: 1px;
+              "
+            >
               Up to 40% off our
               <br />
               Christmas collection
             </h4>
-            <p>
+            <p
+              class="fw-normal fs-5 lh-sm text-center"
+              style="color: #595667; font-family: 'Inter', serif"
+            >
               Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
               phasellus mollis sit aliquam sit nullam neque ultrices.
             </p>
-            <button>Shop Now</button>
+            <button
+              class="fw-bold fs-6 lh-base border-0 text-uppercase text-decoration-underline"
+              style="
+                color: #3a3845;
+                background: none;
+                font-family: 'Inter', serif;
+                width: 120px;
+                height: 40px;
+              "
+            >
+              Shop Now
+            </button>
           </div>
-          <div>
+          <div class="col p-0">
             <img src="../assets/Homepage24.png" alt="" />
           </div>
         </div>
@@ -156,11 +243,16 @@ const cards = [
   </div>
   <!-- section 3 -->
   <div class="outer-container">
-    <div class="container text-center">
-      <h1 class="mt-5">Best Sellers</h1>
+    <div class="container">
+      <h1
+        class="mt-5 text-center fw-bold text-uppercase"
+        style="font-family: 'Garamond', serif"
+      >
+        Best Sellers
+      </h1>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5 mt-1">
         <!-- section 3 cards -->
-        <div class="col" v-for="(card, index) in cards" :key="index">
+        <div class="col" v-for="(card, index) in sec3Cards" :key="index">
           <homepageCard
             :image="card.image"
             :title="card.title"
@@ -174,25 +266,149 @@ const cards = [
   <!-- section 4 -->
   <div class="outer-container">
     <div class="container">
-      <div class="row row-cols-2" style="margin-top: 90px">
+      <div
+        class="row row-cols-2 text-center d-flex justify-content-center align-items-center"
+        style="margin-top: 90px"
+      >
         <div
           class="d-flex flex-column justify-content-center align-items-center"
-          style="background-color: #f7f6f5"
+          style="background-color: #f7f6f5; width: 555px; height: 350px"
         >
-          <h4>
+          <h4
+            class="fs-3 fw-bold text-uppercase lh-lg"
+            style="
+              font-family: 'Garamond', serif;
+              color: #3a3845;
+              letter-spacing: 1px;
+            "
+          >
             Made in viet Nam
             <br />
             since 1450
           </h4>
-          <p>
+          <p
+            class="fs-5 fw-normal lh-sm"
+            style="color: #595667; font-family: 'Inter', sans-serif"
+          >
             Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
             phasellus mollis sit aliquam sit nullam neque ultrices.
           </p>
-          <button>Learn more</button>
+          <button
+            class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
+            style="color: #3a3845; font-family: 'Inter', sans-serif"
+          >
+            Learn more
+          </button>
         </div>
-        <div style="padding: 0px">
-          <img src="../assets/Homepage17.jpg" alt="card" />
+        <div
+          style="width: 555px; height: 350px; padding: 0px; overflow: hidden"
+        >
+          <img src="../assets/Homepage17.jpg" alt="card" class="img17" />
         </div>
+        <div
+          style="width: 555px; height: 350px; padding: 0px; overflow: hidden"
+        >
+          <img
+            src="../assets/Homepage18.png"
+            alt="card"
+            class="w-100 h-100 d-block object-fit-cover"
+          />
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+          style="background-color: #f7f6f5; width: 555px; height: 350px"
+        >
+          <h4
+            class="fs-3 fw-bold text-uppercase lh-lg"
+            style="
+              font-family: 'Garamond', serif;
+              color: #3a3845;
+              letter-spacing: 1px;
+            "
+          >
+            Our History
+          </h4>
+          <p
+            class="fs-5 fw-normal lh-sm"
+            style="color: #595667; font-family: 'Inter', sans-serif"
+          >
+            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+            phasellus mollis sit aliquam sit nullam neque ultrices.
+          </p>
+          <button
+            class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
+            style="color: #3a3845; font-family: 'Inter', sans-serif"
+          >
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section 5 -->
+  <div class="outer-container">
+    <div class="container">
+      <h1
+        class="text-uppercase fw-bold lh-lg text-center my-5"
+        style="font-family: 'Garamond', serif; color: #3a3845"
+      >
+        Discover new arrivals
+      </h1>
+      <div class="d-flex flex-row gap-3">
+        <div class="col" v-for="(card, index) in sec5Cards" :key="index">
+          <homepageCard
+            :image="card.image"
+            :title="card.title"
+            :price="card.price"
+            :description="card.description"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section 6 -->
+  <div class="outer-container">
+    <div class="container">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center"
+        style="margin-top: 100px"
+      >
+        <p
+          class="fs-6 fw-semibold"
+          style="color: #595667; font-family: 'Inter', serif"
+        >
+          Sign up for emails
+        </p>
+        <h2
+          class="fs-1 fw-bold text-uppercase mb-3"
+          style="
+            letter-spacing: 1px;
+            font-family: 'Garamond', serif;
+            color: #3a3845;
+          "
+        >
+          For news, collections & more
+        </h2>
+        <form action="">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            class="form-control form-control-lg text-center"
+          />
+        </form>
+        <a
+          href="#"
+          class="fs-6 fw-semibold text-uppercase border border-2 py-2 px-4 mt-5 d-inline-block text-decoration-none"
+          style="
+            background: none;
+            border-color: #3a3845 !important;
+            color: #3a3845;
+          "
+        >
+          sign up
+        </a>
       </div>
     </div>
   </div>
@@ -206,116 +422,22 @@ const cards = [
   height: 640px;
   width: 100%;
 }
-.sec1-homepage-content {
-  background-color: #826f66;
-  height: 640px;
-  width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#sec1-moon-logo {
+.sec1-moon-logo {
   width: 85px;
   height: 81px;
   margin-top: 150px;
   margin-bottom: 20px;
 }
-p {
-  font-size: 20px;
-  color: white;
-  margin-top: 15px;
-}
-#sec1-homepage-title {
-  font-size: 40px;
-  font-family: garamoud;
-  color: #fffdfb;
-  font-weight: bold;
-  letter-spacing: 3px;
-  line-height: 40px;
-  margin-top: 10px;
-}
-#sec1-homepage-button {
-  width: 220px;
-  height: 40px;
-  background-color: #ffffff;
-  border: 0;
-  border-radius: 10px;
-  color: #826f66;
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 50px;
-}
 .outer-container {
   width: 100%;
   min-height: 40svh;
 }
-.sec2-inner-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 100px;
-  gap: 20px;
-}
-.sec2-logo {
-  width: 255px;
-  height: 260px;
-}
-h5 {
-  text-align: center;
-  margin-top: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 2px;
-  line-height: 24px;
-}
-.sec2-inner-container-p2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 100px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.sec2-p2-block1 {
-  background-color: #f7f6f5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.sec2-p2-block1 h4 {
-  font-family: Garamond;
-  font-weight: bold;
-  font-size: 30px;
-  letter-spacing: 4%;
-  line-height: 32px;
-  text-transform: uppercase;
-  color: #3a3845;
-}
-.sec2-p2-block1 p {
-  color: #595667;
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.sec2-p2-block1 button {
-  width: 120px;
-  height: 40px;
-  color: #3a3845;
-  font-family: Inter;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  background: none;
+.outer-container .container #email {
+  border-radius: 0%;
+  border-color: #3a3845;
   border: none;
-  text-transform: uppercase;
-  text-decoration: underline;
+  border-bottom: 2px solid #3a3845;
+  box-shadow: none;
+  width: 500px;
 }
 </style>
