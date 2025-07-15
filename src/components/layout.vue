@@ -15,19 +15,19 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid d-flex justify-content-between align-items-center mx-5">
 
-        <!-- Logo (Left) -->
-        <router-link class="navbar-brand" to="/home"><h1><img src="../assets/Ellipse 6.svg"/>Moon</h1></router-link>
+        <!-- Logo -->
+        <router-link class="navbar-brand" to="/home"><h1><img src="../assets/Ellipse 6.svg"/></h1></router-link>
 
-        <!-- Toggler for small screens -->
+        <!-- Toggler menu -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navclose">
         <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Collapsible Nav -->
+        <!-- Nav -->
         <div class="collapse navbar-collapse justify-content-between" id="navclose">
 
-        <!-- Centered Nav Links -->
-        <ul class="navbar-nav mx-auto d-flex flex-row gap-4">
+        <!-- Center Nav Links -->
+        <ul class="navbar-nav mx-auto d-flex flex-row gap-5">
             <li class="nav-item">
             <router-link class="nav-link" to="/home">Home</router-link>
             </li>
