@@ -13,7 +13,7 @@ import {useRouter} from "vue-router";
     </div>
 
     <!-- section 2-->
-    <div class="container " style="width: 1134px">
+    <div class="container " style="width: 1134px;">
 
         <div class="d-flex flex-row align-items-center sec2">
             <div class="firstrow">
@@ -67,7 +67,7 @@ import {useRouter} from "vue-router";
             </div>
 
             <div class="secondrow mx-5">
-            <h2 class=" mb-5 title">How we works</h2>
+            <h2 class=" mb-5 title">HOW WE WORKS</h2>
             <p class="semtitle">
                 Product design
             </p>
@@ -92,21 +92,77 @@ import {useRouter} from "vue-router";
                 Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi.
             </p>
             </div>
-            
-        
+
         </div>
         </div>
 
-        <div>
-            e
+        <div class="container outer">
+            <div>
+                <h1 class="text-center teamtitle">MEET OUR TEAM</h1>
+            <div class="inner">
+                
+                <div>
+                <img
+                    src="../assets/YM.jpg"
+                    alt="moon-logo"
+                    class="sec2-logo"
+                />
+                <h5 class="text-center mt-3">ABU ABDULADHEEM</h5>
+                <p class="text-center">CEO & Founder</p>
+                </div>
+                <div>
+                <img
+                    src="../assets/YM2.jpg"
+                    alt="moon-logo"
+                    class="sec2-logo"
+                />
+                <h5 class="text-center mt-3">ABU ABDULADHEEM</h5>
+                <p class="text-center">Creative Director</p>
+                </div>
+                <div>
+                <img
+                    src="../assets/YM.jpg"
+                    alt="moon-logo"
+                    class="sec2-logo"
+                />
+                <h5 class="text-center mt-3">ABU ABDULADHEEM</h5>
+                <p class="text-center">Artist</p>
+                </div>
+                <div>
+                <img
+                    src="../assets/YM2.jpg"
+                    alt="moon-logo"
+                    class="sec2-logo"
+                />
+                <h5 class="text-center  mt-3">ABU ABDULADHEEM</h5>
+                <p class="text-center">Marketing</p>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+
+        <div class="signup text-center p-5">
+            <div>
+                <p style="font-weight: 600; font-size: 16px; color: #3A3845;">sign up for emails</p>
+                <h2 style="font-weight: 700; font-size: 36px; color: #3A3845;">FOR NEWS COLLECTIONS & MORE</h2>
+            </div>
+            <form>
+                <input value="Enter Your Email Address" type="email" style="margin-top: 24px; width: 389px; border-top: 0; border-left: 0; border-right: 0;color: #595667;" class="text-center" ><br>
+                <button class="btn btn-outline-dark" style="margin-top: 24px; font-size: 12px;color: #3A3845; width: 103px; height: 39px; font-weight: 600;">SIGN UP</button>
+            </form>
+
         </div>
     
 </template>
 
 <style scoped>
+*{
+font-family: "Garamond", sans-serif;
+}
     .sec1 h2 {
     font-weight: 700;
-    font-family: "Garamond", sans-serif;
+    
     font-size: 36px;
     color: #3a3845;
     }
@@ -137,14 +193,14 @@ import {useRouter} from "vue-router";
 
     .firstrow h2 {
     font-weight: 700;
-    font-family: "Garamond", sans-serif;
+    
     font-size: 36px;
     color: #3a3845;
     }
 
     .firstrow p {
     font-weight: 400;
-    font-family: "inter", sans-serif;
+    
     font-size: 16px;
     line-height: 24px;
     color: #595667;
@@ -158,16 +214,68 @@ import {useRouter} from "vue-router";
     display: block;
     }
 
+    .secondrow .title{
+        font-family: "Garamond";
+        font-weight: 700;
+        font-size: 28px;
+        font-style: bold;
+        color: #3A3845;
+    }
+
     .secondrow .semtitle {
         font-weight: 600;
         font-size: 18px;
-        font-family: "Garamond", sans-serif;
+        
+        color: #3A3845;
 
     }
 
     .secondrow .semnot {
         font-weight: 400;
         font-size: 16px;
+        color: #595667;
+    }
+
+    .inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        gap: 20px;
+    }
+
+    .outer{
+        width: 1440px;
+        height: 623px;
+    }
+
+    .inner img{
+        width: 255px;
+        height: 321px;
+    }
+
+    .teamtitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        gap: 20px;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 36px;
+        color: #3A3845;
+    }
+
+    h5{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
         
     }
+    
+    
 </style>
