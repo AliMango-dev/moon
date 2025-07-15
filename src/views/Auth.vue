@@ -7,12 +7,6 @@ export default{
       email: '',
       password: ''
     }
-  },
-
-  methods: {
-    handelLogin(){
-      this.$router.push('/')
-    }
   }
 }
 </script>
