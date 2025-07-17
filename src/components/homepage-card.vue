@@ -7,25 +7,33 @@
       :alt="card"
     />
     <div class="card-body" style="padding: 0px">
-      <h5
+      <h6
         class="card-title text-start fw-semibold text-uppercase lh-base mt-3"
         style="
           color: #3a3845;
           font-family: 'Inter', sans-serif;
-          font-size: 18px;
+          font-size: 15px;
         "
       >
         {{ title }}
-      </h5>
-      <h4
-        class="text-start fs-5"
-        style="color: #3a3845; font-family: 'Inter', sans-serif"
+      </h6>
+      <h6
+        class="text-start"
+        style="
+          color: #3a3845;
+          font-family: 'Inter', sans-serif;
+          font-size: 15px;
+        "
       >
         {{ price }}
-      </h4>
+      </h6>
       <p
         class="card-text text-start mt-3"
-        style="color: #807f86; font-family: 'Inter', sans-serif"
+        style="
+          color: #807f86;
+          font-family: 'Inter', sans-serif;
+          font-size: 15px;
+        "
       >
         {{ description }}
       </p>
@@ -36,7 +44,7 @@
 
 <style>
 .card {
-  width: 20rem;
+  width: 255px;
   padding: 0px;
   border: none;
 }
