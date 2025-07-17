@@ -142,17 +142,51 @@ import {useRouter} from "vue-router";
             
         </div>
 
-        <div class="signup text-center p-5">
-            <div>
-                <p style="font-weight: 600; font-size: 16px; color: #3A3845;">sign up for emails</p>
-                <h2 style="font-weight: 700; font-size: 36px; color: #3A3845;">FOR NEWS COLLECTIONS & MORE</h2>
-            </div>
-            <form>
-                <input value="Enter Your Email Address" type="email" style="margin-top: 24px; width: 389px; border-top: 0; border-left: 0; border-right: 0;color: #595667;" class="text-center" ><br>
-                <button class="btn btn-outline-dark" style="margin-top: 24px; font-size: 12px;color: #3A3845; width: 103px; height: 39px; font-weight: 600;">SIGN UP</button>
+        <div class="outer-container">
+        <div class="container">
+        <div
+            class="d-flex flex-column justify-content-center align-items-center"
+            style="margin-top: 100px"
+        >
+            <p
+            class="fs-6 fw-semibold"
+            style="color: #595667; font-family: 'Inter', serif"
+            >
+            Sign up for emails
+            </p>
+            <h2
+            class="fs-1 fw-bold text-uppercase mb-3"
+            style="
+                letter-spacing: 1px;
+                font-family: 'Garamond', serif;
+                color: #3a3845;
+            "
+            >
+            For news, collections & more
+            </h2>
+            <form action="">
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email address"
+                class="form-control form-control-lg text-center"
+            />
             </form>
-
+            <a
+            href="#"
+            class="fs-6 fw-semibold text-uppercase border border-2 py-2 px-4 mt-5 d-inline-block text-decoration-none"
+            style="
+                background: none;
+                border-color: #3a3845 !important;
+                color: #3a3845;
+            "
+            >
+            sign up
+            </a>
         </div>
+        </div>
+    </div>
     
 </template>
 
@@ -275,6 +309,19 @@ font-family: "Garamond", sans-serif;
         font-size: 14px;
         line-height: 20px;
         
+    }
+
+        .outer-container {
+    width: 100%;
+    min-height: 40svh;
+    }
+    .outer-container .container #email {
+    border-radius: 0%;
+    border-color: #3a3845;
+    border: none;
+    border-bottom: 2px solid #3a3845;
+    box-shadow: none;
+    width: 500px;
     }
     
     

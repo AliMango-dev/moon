@@ -12,7 +12,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
 <template>
 
 <header v-if="!shouldHideLayout">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px solid #CAC9CF;">
     <div class="container-fluid d-flex justify-content-between align-items-center mx-5">
 
         <!-- Logo -->
@@ -78,7 +78,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
       <!--Grid row-->
       <div class="row justify-content-center">
         <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 " style="border-right: 1px solid #CAC9CF; height: 318px; margin-top: 48px;">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0  " style="border-right: 1px solid #CAC9CF; height: 318px; margin-top: 48px;">
           <img src="../assets/logo.svg">
 
           <p style="color: #E5E5E5; margin-top: 24px;">
@@ -90,7 +90,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-2 col-md-6 mb-4 mb-md-0" style="margin-top: 48px;">
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 " style="margin-top: 48px;">
           <h5 class="text-uppercase">About us</h5>
 
           <ul class="list-unstyled mb-0 mt-3">
@@ -138,8 +138,10 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
 
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0" style="margin-top: 48px;">
           <h5 class="text-uppercase">Portfolio</h5>
+          
 
           <ul class="list-unstyled mb-0">
+            
             <li>
               <router-link  class="nav-link">Corporate websites</router-link>
             </li>
@@ -173,7 +175,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
 </template>
 
 <style scoped>
-li{
+footer li{
   margin: 24px;
 }
 </style>
