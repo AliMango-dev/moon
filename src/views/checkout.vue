@@ -55,7 +55,7 @@ import { useRouter } from 'vue-router'
 
             <div style="margin-bottom: 30px;">
                 <label for="notes" class="form-label">Order Notes</label>
-                <textarea class="form-control" id="notes" rows="3" placeholder="Type your message here..."></textarea>
+                <textarea class="form-control" rows="3" placeholder="Type your message here..." style="resize: none;"></textarea>
             </div>
             <div class="row">
                 <div class="col">
@@ -71,57 +71,71 @@ import { useRouter } from 'vue-router'
         </div>
         
         <div class="col-lg-4">
-            <div class="card p-4 bg-dark text-white">
-    <h5>Product</h5>
-    <ul class="list-unstyled">
-        <li class="d-flex justify-content-between">Porcelain Dinner Plate <span>$59.00</span></li>
-        <li class="d-flex justify-content-between">Ophelia Vase <span>$168.00</span></li>
-        <li class="d-flex justify-content-between">Luana Bowl <span>$49.00</span></li>
-    </ul>
-    <hr class="border-light">
-    <div class="d-flex justify-content-between">
-        <strong>Subtotal</strong>
-        <span>$475.00</span>
-    </div>
-    <div class="d-flex justify-content-between">
-        <strong>Shipping</strong>
-        <span>$15.00</span>
-    </div>
-    <div class="d-flex justify-content-between mt-2">
-        <strong>Total</strong>
-        <strong>$490.00</strong>
-    </div>
+            <div class="card" style="width: 416px;">
+                <div class="d-flex justify-content-between" style="border-bottom: 1px solid #CAC9CF; margin-bottom: 40px;">
+                    <h5>Product</h5>
+                    <strong>Subtotal</strong>
+                </div>
+                
+    
+        <ul class="list-unstyled" style="margin-bottom: 40px;">
+            <li class="d-flex justify-content-between">Porcelain Dinner Plate <span>$59.00</span></li>
+            <li class="d-flex justify-content-between">Ophelia Vase <span>$168.00</span></li>
+            <li class="d-flex justify-content-between">Luana Bowl <span>$49.00</span></li>
+        </ul>
+        <hr class="border-light">
+        <div class="d-flex justify-content-between">
+            <strong>Subtotal</strong>
+            <span>$475.00</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <strong>Shipping</strong>
+            <span>$15.00</span>
+        </div>
+        <hr class="border-light">
+        <div class="d-flex justify-content-between mt-2" style="border-top: 1px solid #CAC9CF; margin-bottom: 48px;">
+            <strong>Total</strong>
+            <strong>$490.00</strong>
+        </div>
 
-    <hr class="border-light">
+    <div class="card" style="background-color: #3A3845; width: 416px; color: #FFFFFF;">
+        <div style="margin-left: 30px; margin-top: 30px; margin-right: 30px; margin-bottom: 30px;">
 
-    <h5 class="mt-3">Payment</h5>
+        
+    <h5 class="mt-3" style="margin-bottom: 20px;">Payment</h5>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
-        <label class="form-check-label" for="creditCard">Credit card</label>
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label">Credit card </label>
+        <img style="margin-left: 165px;" src="../assets/card.svg">
     </div>
+    <hr><div></div></hr>
 
-    <div class="mb-3 mt-2">
-        <input type="text" class="form-control" placeholder="Card number">
+    <div class="mb-3 mt-2 " style="">
+        <input type="text" class="form-control bg-transparent" value="Card number" style="color: #A6A6A8;">
     </div>
     <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Name on card">
+        <input type="text" class="form-control bg-transparent" value="Name on card" style="color: #A6A6A8;">
     </div>
     <div class="row">
         <div class="col">
-        <input type="text" class="form-control" placeholder="MM/YY">
+        <input type="text" class="form-control bg-transparent" value="Expiration date" style="color: #A6A6A8;">
         </div>
         <div class="col">
-        <input type="text" class="form-control" placeholder="CVV">
+        <input type="text" class="form-control bg-transparent" value="security code" style="color: #A6A6A8;">
         </div>
     </div>
+    <hr><div></div></hr>
 
     <div class="form-check mt-3">
         <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
-        <label class="form-check-label" for="paypal">PayPal</label>
+        <label class="form-check-label" for="paypal"><img src="../assets/paypal.svg"></label>
     </div>
+    
 
-    <button class="btn btn-light mt-3 w-100">Place Order</button>
+    <button class="btn btn-outline-light mt-3 w-100 ">Place Order</button>
     </div>
+    </div>
+            </div>
 
         </div>
     </div>
