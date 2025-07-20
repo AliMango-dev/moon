@@ -72,7 +72,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
     <slot />
 </main>
 
-<footer style="background-color: #3A3845; color: #CAC9CF;">
+<footer v-if="!shouldHideLayout" style="background-color: #3A3845; color: #CAC9CF;">
     <!-- Grid container -->
     <div class="container p-4" style="width: 1110px;">
       <!--Grid row-->
