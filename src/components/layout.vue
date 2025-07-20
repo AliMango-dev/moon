@@ -12,6 +12,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
 <template>
 
 <header v-if="!shouldHideLayout">
+  <div class="container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px solid #CAC9CF;">
     <div class="container-fluid d-flex justify-content-between align-items-center mx-5">
 
@@ -27,7 +28,7 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
         <div class="collapse navbar-collapse justify-content-between" id="navclose">
 
         <!-- Center Nav Links -->
-        <ul class="navbar-nav mx-auto d-flex flex-row gap-5">
+        <ul class="navbar-nav mx-auto d-flex flex-col gap-1">
             <li class="nav-item">
             <router-link class="nav-link" to="/home">Home</router-link>
             </li>
@@ -61,6 +62,9 @@ const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
         </div>
     </div>
     </nav>
+
+  </div>
+    
 
 
 

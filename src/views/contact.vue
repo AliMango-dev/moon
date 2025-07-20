@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 </script>
 
 <template>
+    
     <!-- Section 1 Background Only -->
     <section class="section1-bg w-100 d-flex justify-content-center align-items-center">
 
