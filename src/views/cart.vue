@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import ProductComponent from '../components/ProductComponent.vue'
+import hp19 from '../assets/Homepage19.jpg'
+import hp20 from '../assets/Homepage20.jpg'
+import hp21 from '../assets/Homepage21.jpg'
 
     const products = ref([
     {
@@ -8,21 +11,21 @@ import ProductComponent from '../components/ProductComponent.vue'
         name: "PORCELAIN DINNER PLATE (27CM)",
         price: 19,
         quantity: 2,
-        image: ""
+        image: hp19
     },
     {
         id: 2,
         name: "OPHELIA MATTE NATURAL VASE",
         price: 168,
         quantity: 1,
-        image: ""
+        image: hp20
     },
     {
         id: 3,
         name: "PORCELAIN DINNER PLATE",
         price: 70,
         quantity: 1,
-        image: ""
+        image: hp21
     }
     ])
 
