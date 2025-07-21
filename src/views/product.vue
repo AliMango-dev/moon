@@ -68,50 +68,51 @@ export default {
 
 <template>
     <!-- Section 1 -->
-     <section class="font-inter">
+     <section class="font-inter mx-5">
         <div class="row g-2">
             <!-- Left Side -->
-            <div class="col-12 col-sm-9 col-md-6">
-                <div class="col-md-8 ms-md-5 mx-md-2 mx-0 px-0">
-  <!-- Breadcrumb -->
-    <div class="breadcrumb-links mt-3">
-    <nav aria-label="breadcrumb" class="w-100">
-      <ol class="breadcrumb text-center text-md-end mb-0 ms-4 ms-md-0">
-        <li class="breadcrumb-item">
-          <router-link to="/home" class="text-secondary">Home</router-link>
-        </li>
-        <li class="breadcrumb-item">
-          <router-link to="/shop" class="text-secondary">Shop</router-link>
-        </li>
-        <li class="text-moon breadcrumb-item active" aria-current="page" style="letter-spacing: 1.5px; word-spacing: 1px;">
-          Marin White Dinner Plate
-        </li>
-      </ol>
-    </nav>
-</div>
+            <div class="col-12 col-sm-9 col-md-6 ms-md-5 ">
+                <div class="col-md-9 ms-md-5 mx-md-2 mx-0 px-0"> 
+                      <!-- Breadcrumb -->
+                      <div class="breadcrumb-links mt-3">
+                          <nav aria-label="breadcrumb" class="w-100">
+                            <ol class="breadcrumb text-center text-md-end mb-0 ms-4 ms-md-0">
+                                <li class="breadcrumb-item">
+                                  <router-link to="/home" class="text-secondary">Home</router-link>
+                                </li>
 
-  <!-- Big plate picture -->
-  <div class="container mt-5 px-3 px-md-0">
-    <img src="../assets/products-big-plate.svg" alt="big blue plate" class="big-plate img-fluid d-block">
+                                <li class="breadcrumb-item">
+                                  <router-link to="/shop" class="text-secondary">Shop</router-link>
+                                </li>
 
-    <!-- Thumbnails -->
-    <div class="container d-block mt-4 mb-md-0 px-0">
-      <nav class="d-flex justify-content-center justify-content-lg-end gap-2 flex-wrap w-100">
-        <img src="../assets/products-choose-1.svg" alt="product 1" class="img-fluid" />
-        <img src="../assets/products-choose-2.svg" alt="product 2" class="img-fluid" />
-        <img src="../assets/products-choose-3.svg" alt="product 3" class="img-fluid" />
-        <img src="../assets/products-choose-4.svg" alt="product 4" class="img-fluid" />
-        <img src="../assets/products-choose-5.svg" alt="product 5" class="img-fluid" />
-      </nav>
-    </div>
-  </div>
-</div>
+                                <li class="text-moon breadcrumb-item active" aria-current="page" style="letter-spacing: 1.5px; word-spacing: 1px;">
+                                  Marin White Dinner Plate
+                                </li>
+                            </ol>
+                          </nav>
+                      </div>
 
+                    <!-- Big plate picture -->
+                    <div class="container mt-5 px-3 px-md-0">
+                      <img src="../assets/products-big-plate.svg" alt="big blue plate" class="big-plate img-fluid d-block">
+
+                      <!-- Thumbnails -->
+                      <div class="container d-block mt-4 mb-md-0 px-0">
+                        <nav class="d-flex justify-content-center justify-content-lg-end gap-2 flex-lg-nowrap w-100">
+                          <img src="../assets/products-choose-1.svg" alt="product 1" class="img-fluid" />
+                          <img src="../assets/products-choose-2.svg" alt="product 2" class="img-fluid" />
+                          <img src="../assets/products-choose-3.svg" alt="product 3" class="img-fluid" />
+                          <img src="../assets/products-choose-4.svg" alt="product 4" class="img-fluid" />
+                          <img src="../assets/products-choose-5.svg" alt="product 5" class="img-fluid" />
+                        </nav>
+                      </div>
+                    </div>
+              </div>
             </div>          
 
 
             <!-- Right Side -->
-            <div class="col-12 col-sm-9 col-md-6 ">
+            <div class="col-12 col-sm-9 col-md-5 ">
                <div class="container container-content">
                     <div class="container">
                         <h5 class="text-moon font-inter fw-semibold">MARIN WHITE DINNER PLATE</h5>
@@ -145,7 +146,7 @@ export default {
                     
                     <!-- Buttons Section -->
                     <div class="row mt-5">
-                        <div class="col-8 ms-2 col-lg-11 col-md-9 ms-md-0">
+                        <div class="col-8 ms-2 col-lg-11 col-md-9 ms-md-2">
                             <!-- quantity - add to cart -->
                             <div class="d-flex gap-2 mb-2 align-items-stretch ">
 
@@ -212,28 +213,23 @@ export default {
             </div>
         </div>
         <!-- Grid Finishes -->
-            <!-- Simiral Item -->
+        <!-- Simiral Item -->
 
-      <div class="outer-container">
-    <div class="container">
-      <h1
-        class="text-uppercase fw-bold lh-lg text-center my-5"
-        style="font-family: 'Garamond', serif; color: #3a3845"
-      >
-        Discover new arrivals
-      </h1>
-      <div class="d-flex flex-row gap-3">
-        <div class="col" v-for="(card, index) in sec5Cards" :key="index">
-          <homepageCard
-            :image="card.image"
-            :title="card.title"
-            :price="card.price"
-            :description="card.description"
-          />
+        <div class="mx-5 my-5">
+          <h1 class="fw-bold lh-lg my-5 text-moon font-garamond mb-5 gap-3 ms-5">SIMILAR ITEMS</h1>
+          <div class="d-flex flex-row">
+            <div class="col-md-2 d-block mx-5" v-for="(card, index) in sec6Cards" :key="index">
+                <productCard
+                  :image="card.image"
+                  :title="card.title"
+                  :price="card.price"
+                  :description="card.description"
+                />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+        
     </section>
 </template>
 
@@ -277,8 +273,6 @@ export default {
     border: #3A3845 solid 1.5px;
 }
 
-
-
 .breadcrumb-item a {
   text-decoration: none;
 }
@@ -293,6 +287,7 @@ export default {
 .big-plate{
     
 }
+
 .outer-container {
   width: 100%;
   min-height: 40svh;
