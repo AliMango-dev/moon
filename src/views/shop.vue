@@ -1,11 +1,100 @@
+<script setup>
+import { useRouter } from "vue-router";
+import category from "../components/shop-category.vue";
+import shopCard from "../components/homepage-card.vue";
+import Homepage9 from "../assets/Homepage9.jpg";
+import Homepage10 from "../assets/Homepage10.jpg";
+import Homepage11 from "../assets/Homepage11.jpg";
+import Homepage12 from "../assets/Homepage12.jpg";
+import Homepage13 from "../assets/Homepage13.jpg";
+import Homepage14 from "../assets/Homepage14.jpg";
+import Homepage15 from "../assets/Homepage15.jpg";
+import Homepage16 from "../assets/Homepage16.jpg";
+import Shop1 from "../assets/Shop1.png";
+
+const shopCards = [
+  {
+    image: Homepage9,
+    title: "Small Ecru Ceramic Compote",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage10,
+    title: "Warrick White Vase 14'",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage11,
+    title: "Porcelain Dinner Plate",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage12,
+    title: "Warrick White Vase 20",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage13,
+    title: "Rounded Dual Handled Vase",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage14,
+    title: "Marin White Dinner Plate",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage15,
+    title: "Tall Cream Ceramic Vase",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Homepage16,
+    title: "Luana Bowl",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+  {
+    image: Shop1,
+    title: "Luana Bowl",
+    price: "$49.00",
+    description:
+      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
+  },
+];
+</script>
 <template>
   <div class="outer-container">
     <div class="container">
       <!-- category section -->
       <div class="row">
-        <p class="mt-4" style="margin-bottom: 20px">
-          <span class="text-muted">Home</span> / Shop
-        </p>
+        <nav aria-label="breadcrumb" style="margin-top: 20px">
+          <ol class="breadcrumb bg-transparent px-0">
+            <li class="breadcrumb-item">
+              <router-link to="/home" class="text-muted text-decoration-none"
+                >Home</router-link
+              >
+            </li>
+            <li class="breadcrumb-item active text-dark" aria-current="page">
+              Shop
+            </li>
+          </ol>
+        </nav>
         <div class="d-flex justify-content-end align-items-center">
           <label for="sortSelect" class="me-2 text-muted fs-6">Sort by:</label>
           <select
@@ -93,86 +182,7 @@
     </div>
   </div>
 </template>
-<script setup>
-import { useRouter } from "vue-router";
-import category from "../components/shop-category.vue";
-import shopCard from "../components/homepage-card.vue";
-import Homepage9 from "../assets/Homepage9.jpg";
-import Homepage10 from "../assets/Homepage10.jpg";
-import Homepage11 from "../assets/Homepage11.jpg";
-import Homepage12 from "../assets/Homepage12.jpg";
-import Homepage13 from "../assets/Homepage13.jpg";
-import Homepage14 from "../assets/Homepage14.jpg";
-import Homepage15 from "../assets/Homepage15.jpg";
-import Homepage16 from "../assets/Homepage16.jpg";
-import Shop1 from "../assets/Shop1.png";
 
-const shopCards = [
-  {
-    image: Homepage9,
-    title: "Small Ecru Ceramic Compote",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage10,
-    title: "Warrick White Vase 14'",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage11,
-    title: "Porcelain Dinner Plate",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage12,
-    title: "Warrick White Vase 20",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage13,
-    title: "Rounded Dual Handled Vase",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage14,
-    title: "Marin White Dinner Plate",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage15,
-    title: "Tall Cream Ceramic Vase",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Homepage16,
-    title: "Luana Bowl",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-  {
-    image: Shop1,
-    title: "Luana Bowl",
-    price: "$49.00",
-    description:
-      "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
-  },
-];
-</script>
 <style scoped>
 .outer-container {
   width: 1260px;

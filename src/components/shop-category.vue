@@ -1,8 +1,5 @@
 <template>
-  <h6
-    class="fw-semibold bor"
-    style="font-family: 'Inter', serif; color: #3a3845"
-  >
+  <h6 class="fw-semibold" style="font-family: 'Inter', serif; color: #3a3845">
     Showing 120 items
   </h6>
 
@@ -35,9 +32,14 @@
     <span
       v-for="color in colors"
       :key="color"
-      :style="{ background: color }"
-      class="border"
-      style="width: 18px; height: 18px"
+      :style="{
+        background: color,
+        transform: selectedColor === color ? 'scale(1.4)' : 'scale(1)',
+        border:
+          selectedColor === color ? '1px solid #3a3845' : '1px solid #ccc',
+      }"
+      class="color-circle"
+      @click="selectColor(color)"
     ></span>
   </div>
 
@@ -53,6 +55,8 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const categories = [
   "Dinnerware",
   "Ceramic",
@@ -63,4 +67,36 @@ const categories = [
 const tags = ["Dinnerware", "Ceramic", "Furniture", "Decor Art", "Gifts sets"];
 const prices = ["$0 - $10", "$10 - $50", "$50 - $100", "$100 - $200", ">$200"];
 const colors = ["#FFFFFF", "#D3A17E", "#D1E0D0", "#D98787", "#A297B2"];
+
+const selectedColor = ref(null);
+
+function selectColor(color) {
+  selectedColor.value = color;
+}
 </script>
+
+<style scoped>
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  border-radius: 0;
+  border: 1.5px solid #3a3845;
+  outline: none;
+}
+
+.form-check-input:checked {
+  background-color: #3a3845;
+  border-color: #3a3845;
+}
+
+.color-circle {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+</style>

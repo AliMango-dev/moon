@@ -47,7 +47,13 @@
   width: 255px;
   padding: 0px;
   border: none;
+  transition: transform 0.3s ease; 
 }
+
+.card:hover {
+  transform: scale(1.03); 
+}
+
 .card-body .btn {
   border: 2px solid #3a3845;
   border-radius: 0%;

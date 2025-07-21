@@ -1,18 +1,19 @@
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 import favRow from "../components/favRow.vue";
 import Homepage19 from "../assets/Homepage19.jpg";
 import Homepage20 from "../assets/Homepage20.jpg";
 import Homepage21 from "../assets/Homepage21.jpg";
 
-const favItem = [
+const favItem = ref([
   {
     title: "Porcelain Dinner Plate (27cm)",
     price: "$59",
     image: Homepage19,
   },
   {
-    title: "Ophelia Matte Natural  Vase",
+    title: "Ophelia Matte Natural Vase",
     price: "$168",
     image: Homepage20,
   },
@@ -21,19 +22,29 @@ const favItem = [
     price: "$70",
     image: Homepage21,
   },
-];
+]);
+
+function removeItem(index) {
+  favItem.value.splice(index, 1);
+}
 </script>
 
 <template>
   <div class="fav-outer-container">
     <div class="container">
       <!-- path link section -->
-      <a
-        class="mt-4 d-block text-decoration-none"
-        style="cursor: pointer; color: #3a3845"
-      >
-        <span class="text-muted">Home</span> / Shop
-      </a>
+      <nav aria-label="breadcrumb" style="margin-top: 20px">
+        <ol class="breadcrumb bg-transparent px-0">
+          <li class="breadcrumb-item">
+            <router-link to="/home" class="text-muted text-decoration-none"
+              >Home</router-link
+            >
+          </li>
+          <li class="breadcrumb-item active text-dark" aria-current="page">
+            Favourite
+          </li>
+        </ol>
+      </nav>
       <!-- Title -->
       <h3
         class="fw-semibold"
@@ -44,7 +55,9 @@ const favItem = [
           font-family: 'Inter', serif;
         "
       >
-        Favourite (3 item)
+        Favourite ({{ favItem.length }} item<span v-if="favItem.length !== 1"
+          >s</span
+        >)
       </h3>
       <table class="table align-middle text-center">
         <thead>
@@ -77,6 +90,7 @@ const favItem = [
             :price="item.price"
             :image="item.image"
             :addCartBtn
+            @remove="removeItem(index)"
           />
         </tbody>
       </table>
