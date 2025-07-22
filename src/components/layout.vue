@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 
 const route = useRoute()
-const hideLayoutRoutes = ['Authentication']
+const hideLayoutRoutes = ['Authentication' , 'signup']
 const shouldHideLayout = computed(() => hideLayoutRoutes.includes(route.name))
 </script>
 

@@ -23,7 +23,7 @@ const routes = [
   {path: "/products", component: product},
   {path: "/profile", component: profile},
   {path: "/shop", component: shop},
-  { path: '/signup', component: signup },
+  { path: '/signup', name:"signup" , component: signup },
 ];
 const router = createRouter({
   history: createWebHistory(),
