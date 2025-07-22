@@ -19,11 +19,11 @@
 
     <td class="py-3">
       <div class="d-flex justify-content-center align-items-center">
-        <div style="width: 128px; overflow: hidden">
+        <div class="img-container">
           <img
             :src="image"
             :alt="title"
-            width="128"
+            class="img-fluid"
             style="max-height: 160px; object-fit: contain"
           />
         </div>
@@ -39,7 +39,8 @@
     </td>
 
     <td class="text-center py-3">
-      <button class="btn btn-primary px-4 py-2">{{ addCartBtn }}</button>
+      <button style=" background-color:#3a3845 ; color: #FFF;" class="btn w-100 d-none d-md-inline">{{ addCartBtn }}</button>
+      <button style=" background-color:#3a3845 ; color: #FFF;" class="btn w-100 d-inline d-md-none">Buy</button>
     </td>
   </tr>
 </template>
@@ -56,8 +57,13 @@ defineProps({
 });
 </script>
 
-<style>
+<style scoped>
 td {
   border-bottom: 2px solid #3a3845 !important;
+}
+.img-container {
+  width: 100%;
+  max-width: 128px;
+  overflow: hidden;
 }
 </style>
