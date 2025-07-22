@@ -1,6 +1,11 @@
 <script setup>
 import { useRouter } from "vue-router";
 import homepageCard from "../components/homepage-card.vue";
+import homepageCard2 from "../components/homepage-card2.vue";
+import Homepage2 from "../assets/Homepage2.jpg";
+import Homepage3 from "../assets/Homepage3.jpg";
+import Homepage4 from "../assets/Homepage4.jpg";
+import Homepage5 from "../assets/Homepage5.jpg";
 import Homepage9 from "../assets/Homepage9.jpg";
 import Homepage10 from "../assets/Homepage10.jpg";
 import Homepage11 from "../assets/Homepage11.jpg";
@@ -102,6 +107,24 @@ const sec5Cards = [
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
 ];
+const sec2Cards = [
+  {
+    image: Homepage2,
+    title: "tableware",
+  },
+  {
+    image: Homepage3,
+    title: "home decor",
+  },
+  {
+    image: Homepage4,
+    title: "holiday",
+  },
+  {
+    image: Homepage5,
+    title: "colliction",
+  },
+];
 </script>
 <template>
   <!-- section 1 -->
@@ -125,17 +148,19 @@ const sec5Cards = [
           <br />
           DINNER SET
         </h3>
-        <button
-          class="fs-5 fw-semibold mt-5 border-0 rounded"
-          style="
-            width: 220px;
-            height: 40px;
-            background-color: #ffffff;
-            color: #826f66;
-          "
-        >
-          Shop Now
-        </button>
+        <router-link to="/shop">
+          <button
+            class="fs-5 fw-semibold mt-5 border-0 rounded"
+            style="
+              width: 220px;
+              height: 40px;
+              background-color: #ffffff;
+              color: #826f66;
+            "
+          >
+            Shop Now
+          </button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -147,47 +172,8 @@ const sec5Cards = [
         class="d-flex flex-row justify-content-center align-items-center flex-wrap gap-4"
         style="margin-top: 100px"
       >
-        <div>
-          <img
-            src="../assets/Homepage2.jpg"
-            alt="moon-logo"
-            style="width: 255px; height: 260px"
-          />
-          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
-            TableWare
-          </h5>
-        </div>
-
-        <div>
-          <img
-            src="../assets/Homepage3.jpg"
-            alt="moon-logo"
-            style="width: 255px; height: 260px"
-          />
-          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
-            Home decor
-          </h5>
-        </div>
-        <div>
-          <img
-            src="../assets/Homepage4.jpg"
-            alt="moon-logo"
-            style="width: 255px; height: 260px"
-          />
-          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
-            Holiday
-          </h5>
-        </div>
-
-        <div>
-          <img
-            src="../assets/Homepage5.jpg"
-            alt="moon-logo"
-            style="width: 255px; height: 260px"
-          />
-          <h5 class="text-center text-uppercase fw-semibold fs-5 lh-sm mt-3">
-            collection
-          </h5>
+        <div class="col" v-for="(card, index) in sec2Cards" :key="index">
+          <homepageCard2 :image="card.image" :title="card.title" />
         </div>
       </div>
     </div>
@@ -221,18 +207,20 @@ const sec5Cards = [
               Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
               phasellus mollis sit aliquam sit nullam neque ultrices.
             </p>
-            <button
-              class="fw-bold fs-6 lh-base border-0 text-uppercase text-decoration-underline"
-              style="
-                color: #3a3845;
-                background: none;
-                font-family: 'Inter', serif;
-                width: 120px;
-                height: 40px;
-              "
-            >
-              Shop Now
-            </button>
+            <router-link to="/shop">
+              <button
+                class="fw-bold fs-6 lh-base border-0 text-uppercase text-decoration-underline"
+                style="
+                  color: #3a3845;
+                  background: none;
+                  font-family: 'Inter', serif;
+                  width: 120px;
+                  height: 40px;
+                "
+              >
+                Shop Now
+              </button>
+            </router-link>
           </div>
           <div class="col p-0">
             <img src="../assets/Homepage24.png" alt="" />
@@ -293,12 +281,14 @@ const sec5Cards = [
             Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
             phasellus mollis sit aliquam sit nullam neque ultrices.
           </p>
-          <button
-            class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
-            style="color: #3a3845; font-family: 'Inter', sans-serif"
-          >
-            Learn more
-          </button>
+          <router-link to="/about">
+            <button
+              class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
+              style="color: #3a3845; font-family: 'Inter', sans-serif"
+            >
+              Learn more
+            </button>
+          </router-link>
         </div>
         <div
           style="width: 555px; height: 350px; padding: 0px; overflow: hidden"
@@ -335,12 +325,14 @@ const sec5Cards = [
             Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
             phasellus mollis sit aliquam sit nullam neque ultrices.
           </p>
-          <button
-            class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
-            style="color: #3a3845; font-family: 'Inter', sans-serif"
-          >
-            Learn more
-          </button>
+          <router-link to="/about">
+            <button
+              class="mt-3 fs-6 fw-bold border-0 bg-transparent text-decoration-underline text-uppercase"
+              style="color: #3a3845; font-family: 'Inter', sans-serif"
+            >
+              Learn more
+            </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -398,17 +390,19 @@ const sec5Cards = [
             class="form-control form-control-lg text-center"
           />
         </form>
-        <a
-          href="#"
-          class="fs-6 fw-semibold text-uppercase border border-2 py-2 px-4 mt-5 d-inline-block text-decoration-none"
-          style="
-            background: none;
-            border-color: #3a3845 !important;
-            color: #3a3845;
-          "
-        >
-          sign up
-        </a>
+        <router-link to="/signup">
+          <a
+            href="#"
+            class="fs-6 fw-semibold text-uppercase border border-2 py-2 px-4 mt-5 d-inline-block text-decoration-none"
+            style="
+              background: none;
+              border-color: #3a3845 !important;
+              color: #3a3845;
+            "
+          >
+            sign up
+          </a>
+        </router-link>
       </div>
     </div>
   </div>

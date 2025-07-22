@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from "vue-router";
+import { ref, computed } from "vue";
 import category from "../components/shop-category.vue";
 import shopCard from "../components/homepage-card.vue";
 import Homepage9 from "../assets/Homepage9.jpg";
@@ -16,67 +17,88 @@ const shopCards = [
   {
     image: Homepage9,
     title: "Small Ecru Ceramic Compote",
-    price: "$49.00",
+    price: "$32.00",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage10,
     title: "Warrick White Vase 14'",
-    price: "$49.00",
+    price: "$75.00",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage11,
     title: "Porcelain Dinner Plate",
-    price: "$49.00",
+    price: "$28.50",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage12,
     title: "Warrick White Vase 20",
-    price: "$49.00",
+    price: "$92.00",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage13,
     title: "Rounded Dual Handled Vase",
-    price: "$49.00",
+    price: "$54.99",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage14,
     title: "Marin White Dinner Plate",
-    price: "$49.00",
+    price: "$39.95",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage15,
     title: "Tall Cream Ceramic Vase",
-    price: "$49.00",
+    price: "$66.50",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Homepage16,
     title: "Luana Bowl",
-    price: "$49.00",
+    price: "$45.00",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
   {
     image: Shop1,
     title: "Luana Bowl",
-    price: "$49.00",
+    price: "$51.25",
     description:
       "Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit.",
   },
 ];
+// Sort code
+const selectedSort = ref("default"); 
+
+const parsePrice = (priceStr) => parseFloat(priceStr.replace(/[^0-9.]/g, ""));
+
+const sortedShopCards = computed(() => {
+  const cards = [...shopCards];
+
+  switch (selectedSort.value) {
+    case "price-asc":
+      return cards.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    case "price-desc":
+      return cards.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    case "title-asc":
+      return cards.sort((a, b) => a.title.localeCompare(b.title));
+    case "title-desc":
+      return cards.sort((a, b) => b.title.localeCompare(a.title));
+    default:
+      return cards;
+  }
+});
 </script>
 <template>
   <div class="outer-container">
@@ -115,7 +137,11 @@ const shopCards = [
         <!-- cards section -->
         <div class="col-md">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 mt-1 ms-3">
-            <div class="col" v-for="(card, index) in shopCards" :key="index">
+            <div
+              class="col"
+              v-for="(card, index) in sortedShopCards"
+              :key="index"
+            >
               <shopCard
                 :image="card.image"
                 :title="card.title"
