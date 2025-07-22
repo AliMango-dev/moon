@@ -84,12 +84,12 @@
             <div class="text-center">
               <small class="fw-medium">
                 Don't have an account?
-                <a
-                  href="#"
+                <router-link
+                  to="/signup"
                   class="fw-bold text-decoration-none text-primary"
                 >
                   Sign Up
-                </a>
+                </router-link>
               </small>
             </div>
           </form>
@@ -100,6 +100,8 @@
 </template>
 
 <script>
+import signup from './signup.vue';
+
 export default {
   data() {
     return {
@@ -107,7 +109,11 @@ export default {
       password: "",
     };
   },
+
+  components: signup
 };
+
+
 </script>
 
 <style scoped>

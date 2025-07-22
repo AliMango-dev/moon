@@ -10,6 +10,7 @@ import Homepage from "../views/Homepage.vue";
 import product from "../views/product.vue";
 import profile from "../views/profile.vue";
 import shop from "../views/shop.vue";
+import signup from '../views/signup.vue'
 
 const routes = [
   {path: "/home", component: Homepage},
@@ -22,6 +23,7 @@ const routes = [
   {path: "/products", component: product},
   {path: "/profile", component: profile},
   {path: "/shop", component: shop},
+  { path: '/signup', component: signup },
 ];
 const router = createRouter({
   history: createWebHistory(),

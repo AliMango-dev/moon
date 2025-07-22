@@ -112,7 +112,7 @@ export default {
 
 
             <!-- Right Side -->
-            <div class="col-12 col-sm-9 col-md-5 ">
+            <div class="col-12 col-md-5 container-side">
                <div class="container container-content">
                     <div class="container">
                         <h5 class="text-moon font-inter fw-semibold">MARIN WHITE DINNER PLATE</h5>
@@ -212,19 +212,20 @@ export default {
                </div>
             </div>
         </div>
+        
         <!-- Grid Finishes -->
         <!-- Simiral Item -->
 
-        <div class="mx-5 my-5">
+        <div class="mx-3 mx-md-5 my-5">
           <h1 class="fw-bold lh-lg my-5 text-moon font-garamond mb-5 gap-3 ms-5">SIMILAR ITEMS</h1>
-          <div class="d-flex flex-row">
-            <div class="col-md-2 d-block mx-5" v-for="(card, index) in sec6Cards" :key="index">
-                <productCard
-                  :image="card.image"
-                  :title="card.title"
-                  :price="card.price"
-                  :description="card.description"
-                />
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="col-12 col-sm-6 col-md-3" v-for="(card, index) in sec6Cards" :key="index">
+              <productCard
+                :image="card.image"
+                :title="card.title"
+                :price="card.price"
+                :description="card.description"
+              />
             </div>
           </div>
         </div>
@@ -288,9 +289,46 @@ export default {
     
 }
 
+.container-side{
+  margin-left: 0px;
+}
 .outer-container {
   width: 100%;
   min-height: 40svh;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

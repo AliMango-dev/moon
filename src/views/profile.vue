@@ -33,11 +33,11 @@ export default {
   <section class="font-inter">
     <div class="row">
         <!-- Left Side -->
-        <div class="col-12 col-md-5 col-lg-4 mx-lg-5 mx-lg-5 mt-5 mb-3 rounded-4" style="background-color: #826f66;">
+        <div class="col-12 col-md-5 col-lg-4 mx-lg-5 mx-lg-5 mt-5 mb-3 rounded-4 bg-moon">
             <div class="d-flex px-lg-4 flex-column justify-content-between h-100">
-                <div class="text-moon px-4 px-lg-2 ">
+                <div class="text-moon px-4 px-lg-2 sticky-top">
                     <img src="../assets/YM.jpg" alt="profile-icon" class="img-fluid d-block rounded-circle">
-                    <p class="text-white text-center fw-medium fs-5 mt-4 ">WELCOME, {{ user.firstName }}</p><hr>
+                    <p class="text-white text-center fw-medium fs-5 mt-4 ">WELCOME, {{ user.firstName }}</p><hr><br><br>
                 </div>
 
                 <div class="pt-5 pt-lg-0 mx-4 mx-lg-0">
@@ -201,99 +201,197 @@ export default {
                 <div class="tab-pane fade" id="order-tab" role="tabpanel">
                     
                     <div class="container mt-4">
-                        <h3 class="fs-4 fw-bold text-moon mb-4 mt-5">My Orders</h3>
-
-                        <div class="d-flex flex-wrap gap-1">
-                            <!-- Order Item Example -->
-                            <div class="card mb-3 shadow-sm rounded">
+                        <h3 class="fs-4 fw-bold text-moon mb-4 mt-5 mb-5">My Orders</h3>
+                        <div class="d-flex flex-column justify-content-center align-items-center align-content-center gap-5">
+                            
+                            <!-- item 1 -->
+                            <div class="card mb-4 shadow-sm rounded w-100 me-md-5">
                                 <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title mb-1">Order #123456</h5>
-                                        <p class="mb-0"><strong>Status:</strong> <span class="text-success">Delivered</span></p>
-                                        <p class="mb-0"><strong>Date:</strong> 2025-07-15</p>
-                                    </div>
-                                    <div>
-                                        <button class="btn mt-3">View Details</button>
+                                    <div class="row g-4 align-items-center">
+
+                                        <!-- Carousel -->
+                                        <div class="col-12 col-md-5 ms-md-5">
+                                            <div id="item1" class="carousel slide">
+                                                <div class="carousel-inner rounded overflow-hidden">
+                                                    <div class="carousel-item active">
+                                                        <img src="../assets/Homepage19.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Homepage20.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Homepage21.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#item1" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#item1" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Order Info -->
+                                        <div class="col-md-5 ms-2">
+                                            <div class="ps-md-5 d-flex justify-content-center align-items-center">
+                                                <div class="d-block">
+                                                    <h5 class="card-title text-moon h3">Order #123456</h5>
+                                                    <p><strong>Status:</strong> <span class="text-success">Delivered</span></p>
+                                                    <p><strong>Date:</strong> 2025-07-15</p>
+                                                    <button class="btn bg-moon text-white mt-2">View Details</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card mb-3 shadow-sm rounded">
+
+                            <!-- item 2 -->
+                            <div class="card mb-4 shadow-sm rounded w-100 me-md-5">
                                 <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title mb-1">Order #123457</h5>
-                                        <p class="mb-0"><strong>Status:</strong> <span class="text-warning">Processing</span></p>
-                                        <p class="mb-0"><strong>Date:</strong> 2025-07-18</p>
-                                    </div>
-                                    <div>
-                                        <button class="btn mt-3">View Details</button>
+                                    <div class="row g-4 align-items-center">
+
+                                        <!-- Carousel -->
+                                        <div class="ccol-12 col-md-5 ms-md-5">
+                                            <div id="item2" class="carousel slide">
+                                                <div class="carousel-inner rounded overflow-hidden">
+                                                    <div class="carousel-item active">
+                                                        <img src="../assets/Homepage22.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Homepage24.png" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                
+                                                </div>
+
+                                                
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#item2" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#item2" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Order Info -->
+                                        <div class="col-md-5 ms-2">
+                                            <div class="ps-md-5 d-flex justify-content-center align-items-center">
+                                                <div class="d-block">
+                                                    <h5 class="card-title text-moon h3">Order #123457</h5>
+                                                    <p><strong>Status:</strong> <span class="text-warning">Processing</span></p>
+                                                    <p><strong>Date:</strong>2025-07-18</p>
+                                                    <button class="btn bg-moon text-white mt-2">View Details</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card mb-3 shadow-sm rounded">
+                            <!-- item 3 -->
+                            <div class="card mb-4 shadow-sm rounded w-100 me-md-5">
                                 <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title mb-1">Order #123458</h5>
-                                        <p class="mb-0"><strong>Status:</strong> <span class="text-danger">Cancelled</span></p>
-                                        <p class="mb-0"><strong>Date:</strong> 2025-07-19</p>
-                                    </div>
-                                    <div>
-                                        <button class="btn mt-3">View Details</button>
+                                    <div class="row g-4 align-items-center">
+
+                                        <!-- Carousel -->
+                                        <div class="col-12 col-md-5 ms-md-5">
+                                            <div id="item3" class="carousel slide">
+                                                <div class="carousel-inner rounded overflow-hidden">
+                                                    <div class="carousel-item active">
+                                                        <img src="../assets/Homepage17.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Homepage15.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Homepage16.jpg" class="d-block w-100 order-carousel-img" alt="item photo">
+                                                    </div>
+                                                
+                                                </div>
+
+                                                
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#item3" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#item3" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Order Info -->
+                                        <div class="col-md-5 ms-2">
+                                            <div class="ps-md-5 d-flex justify-content-center align-items-center">
+                                                <div class="d-block">
+                                                    <h5 class="card-title text-moon h3">Order #123458</h5>
+                                                    <p><strong>Status:</strong> <span class="text-danger">Cancelled</span></p>
+                                                    <p><strong>Date:</strong>2025-07-19</p>
+                                                    <button class="btn bg-moon text-white mt-2">View Details</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
 
                 <!--  Addresses -->
                 <div class="tab-pane fade" id="address-tab" role="tabpanel">
-                    
                       <div class="container mt-4">
-                            <h3 class="fs-4 fw-bold text-moon py-3 mb-4">My Addresses</h3>
+                            <div class="d-flex justify-content-between w-100 py-3 mb-4">
+                                <h3 class="fs-4 fw-bold text-moon ">My Addresses</h3>
+                                <button class="btn bg-moon text-white h-50">Add New Address</button>
+                            </div>
 
                             <div class="d-flex flex-wrap gap-2">
-                                <!-- Address Card Example -->
-                                <div class="card mb-3 shadow-sm rounded">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Home Address <small>(primary)</small></h5>
+                                <!-- item 1 -->
+                                <div class="card mb-3 shadow-sm rounded ">
+                                    <div class="card-body d-flex flex-column justify-content-between h-25">
+                                        <div>
+                                            <h5 class="card-title">Home Address <small>(primary)</small></h5>
 
-                                        <p class="card-text text-muted mb-1">123 King Abdulaziz Rd</p>
-                                        <p class="card-text text-muted mb-1">Riyadh, Saudi Arabia</p>
-                                        <p class="card-text text-muted mb-3">Zip Code: 11564</p>
+                                            <p class="card-text text-muted mb-1">123 King Abdulaziz Rd</p>
+                                            <p class="card-text text-muted mb-1">Riyadh, Saudi Arabia</p>
+                                            <p class="card-text text-muted mb-3">Zip Code: 11564</p>
+                                        </div>
 
-                                        <button class="btn me-2">Edit</button>
-                                        <button class="btn btn bg-moon text-white">Delete</button>
+                                        <div>
+                                            <button class="btn me-2">Edit</button>
+                                            <button class="btn bg-moon text-white">Delete</button>
+                                        </div>
                                     </div>
                                 </div>
 
+                                <!-- item 2 -->
                                 <div class="card mb-3 shadow-sm rounded">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Work Address</h5>
+                                    <div class="card-body d-flex flex-column justify-content-between h-25">
+                                        <div>
+                                            <h5 class="card-title">Work Address</h5>
 
-                                        <p class="card-text text-muted mb-1">456 Prince Sultan St</p>
-                                        <p class="card-text text-muted mb-1">Jeddah, Saudi Arabia</p>
-                                        <p class="card-text text-muted mb-3">Zip Code: 21577</p>
+                                            <p class="card-text text-muted mb-1">456 Prince Sultan St</p>
+                                            <p class="card-text text-muted mb-1">Jeddah, Saudi Arabia</p>
+                                            <p class="card-text text-muted mb-3">Zip Code: 21577</p>
+                                        </div>
 
-                                        <button class="btn me-2">Edit</button>
-                                        <button class="btn bg-moon text-white">Delete</button>
+                                        <div>
+                                            <button class="btn me-2">Edit</button>
+                                            <button class="btn bg-moon text-white">Delete</button>
+                                        </div>
                                         
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Add New Address -->
-                            <div class="d-flex justify-content-center my-4">
-                                <button class="btn bg-moon text-white border-2">Add New Address</button>
-                                
-                            </div>
                         </div>
                 </div>
-            </div>
-
-            
-            
+            </div> 
         </div>
     </div>
   </section>
@@ -309,5 +407,12 @@ export default {
     background-color: #3A3845;
     color: white !important;
     
+}
+
+.card-item-photo{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 </style>
